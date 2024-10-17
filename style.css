@@ -1,0 +1,205 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+
+:root{
+    --primary-color: #ff6b82;
+    --secondary-color: #fef8f9;
+    --tersary-color:#cdcbcb;
+    --box-shadow:rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+}
+
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Inter";
+}
+body{
+    background-color: #fffefe;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.card-sec{
+    padding: 50px 50px;
+    margin: 10px;
+    border: 1px solid;
+}
+.card-box{
+    text-align: center;
+    padding: 10px;
+    margin: 10px 5px;
+    width: 375px;
+}
+/* Script properties */
+.card-sm-box .select-btntadio{
+    border: 2px solid var(--tersary-color);
+    background: #fff;
+    padding: 15px 10px;
+    margin: 25px 5px;
+}
+.card-sm-box .select-size{
+    display: none;
+}
+.active{
+    border: 2px solid var(--primary-color);
+    background: #fff9fa;
+    padding: 15px 10px;
+    margin: 25px 5px;
+    box-shadow: var(--box-shadow);
+    transition: all 0.5s ease-in-out;
+}
+.card-sm-box .active .select-size{
+    display: block;
+}
+.card-sm-box .active .select-btntadio{
+    border: none;
+    background: none;
+}
+
+.card-title h1 {
+    font-size: 20px;
+    font-weight: 600;
+    padding: 15px 0;
+    color:var(--primary-color);
+    position: relative;
+}
+.card-title h1::after {
+    content: '';
+    position: absolute;
+    right: -40px;
+    top: 30px;
+    border-right: 115px solid var(--tersary-color);
+    height: 2px;
+}
+.card-title h1::before {
+    content: '';
+    position: absolute;
+    left: -40px;
+    top: 30px;
+    border-right: 115px solid var(--tersary-color);
+    height: 2px;
+}
+.select-btntadio{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+}
+.select-radio input {
+    accent-color: red;
+}
+.select-radio label{
+    color: #000;
+    font-size: 18px;
+    font-weight: 700;
+}
+.select-btntadio span{
+    background-color: var(--primary-color);
+    font-size: 12px;
+    font-weight: 400;
+    color: var(--secondary-color);
+    padding: 5px 4px;
+    margin-left: 3px;
+}
+.select-radio h4 {
+    font-size: 16px;
+    padding: 5px 0;
+}
+.select-radio h6{
+    text-align: start;
+    color: var(--tersary-color);
+    text-decoration: line-through;
+    font-size: 14px;
+}
+
+.select-size label{
+    font-size: 20px;
+    padding: 5px 15px;
+    margin: 5px 5px;
+}
+.select-size select{
+    padding: 5px 20px;
+    margin: 10px 6px;
+}
+.total{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 6px;
+    margin: 5px;
+}
+.total h2{
+    font-size: 18px;
+    font-weight: 500;
+    color: var(--primary-color);
+}
+.add-btn button{
+    width: 100%;
+    padding: 15px;
+    font-size: 16px;
+    font-weight: 500;
+    color: #fff;
+    background: var(--primary-color);
+    border: 1px solid var(--primary-color);
+    border-radius: 10px;
+}
+.add-btn button:hover{
+    background-color: #eb7b7b;
+}
+.add-btn p{
+    font-size: 14px;
+    text-align: end;
+    color: var(--tersary-color);
+    padding: 6px;
+}
+.ad{
+    position: relative;
+}
+.popular {
+    position: absolute;
+    top: -12px;
+    right: 15px;
+    background: var(--primary-color);
+    padding: 5px 20px;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 500;
+    border-radius: 6px;
+    /* border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px; */
+}
+.active .popular {
+    top: -50px;
+    right: 0px;
+}
+.price{
+    padding: 5px 0;
+}
+
+@media (min-width: 320px) and (max-width:480px){
+    .card-sec{
+        padding: inherit;
+        margin: inherit;
+    }
+    .card-box{
+        width: 315px;
+        margin: inherit;
+    }
+    .card-title h1::before {
+        left: 0;
+        border-right: 55px solid var(--tersary-color);
+    }
+    .card-title h1::after {
+        right: -5px;
+        border-right: 55px solid var(--tersary-color);
+    }
+}
+@media (min-width: 481px) and (max-width:767px){
+
+}
+@media (min-width: 768px) and (max-width:1024px){
+    
+}
+
